@@ -1,0 +1,16 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: RobotoSlab;
+}
+
+%container {
+  max-width: 1150px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
