@@ -4,17 +4,32 @@
   align-items: center;
   &__title {
     @extend %mainText;
+    margin: 0;
+    margin-top: 100px;
+    letter-spacing: 1px;
   }
   &__sort {
     @extend %minorText;
     line-height: 2.4rem;
+    margin-bottom: 30px;
   }
   &__cruises {
     @include row_grid(15px);
   }
   &__button {
     @extend %button;
-    psdding: 0 40px;
+    padding: 0 40px;
+    margin: {
+      top: 15px;
+      bottom: 65px;
+    }
+  }
+  &__cruise {
+    background-color: #fff;
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
   }
 }
 
@@ -26,14 +41,22 @@
       size: 1.8rem;
       weight: 300;
     }
-    line-height: 4.8rem;
+    line-height: 4.3rem;
     letter-spacing: 1px;
     color: #00a2dd;
+    margin: 0;
+    padding: {
+      top: 15px;
+      left: 35px;
+    }
   }
   &__description {
     @extend %minorText;
     font-weight: 500;
+    line-height: 2.4rem;
     letter-spacing: 1px;
+    margin: 0;
+    padding-left: 35px;
   }
   &__price {
     font: {
@@ -43,7 +66,10 @@
     line-height: 4.8rem;
     color: #0d3351;
     display: inline-block;
+    margin: 0;
+    padding: 7px 35px 30px;
   }
+
   &__old-price {
     font: {
       family: RobotoSlab;
@@ -52,5 +78,8 @@
     line-height: 4.8rem;
     text-decoration: line-through;
     opacity: 0.5;
+  }
+  &__wrapped {
+    margin-bottom: 20px;
   }
 }

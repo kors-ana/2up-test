@@ -59,7 +59,7 @@ body {
   line-height: 4.8rem;
   color: #0d3351; }
 
-.params__item, .catalogue__sort, .cruise__description {
+.params__item, .catalogue__sort, .cruise__description, .ref__itself {
   font-family: Raleway;
   font-size: 1.4rem;
   color: #0d3351; }
@@ -223,8 +223,14 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
+.catalogue__title {
+  margin: 0;
+  margin-top: 100px;
+  letter-spacing: 1px; }
+
 .catalogue__sort {
-  line-height: 2.4rem; }
+  line-height: 2.4rem;
+  margin-bottom: 30px; }
 
 .catalogue__cruises {
   display: -webkit-box;
@@ -242,7 +248,14 @@ body {
   margin-right: -15px; }
 
 .catalogue__button {
-  psdding: 0 40px; }
+  padding: 0 40px;
+  margin-top: 15px;
+  margin-bottom: 65px; }
+
+.catalogue__cruise {
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .cruise {
   width: -webkit-calc(100% / 2 * 555px - 15px * 2);
@@ -254,20 +267,28 @@ body {
   font-family: RobotoSlab;
   font-size: 1.8rem;
   font-weight: 300;
-  line-height: 4.8rem;
+  line-height: 4.3rem;
   letter-spacing: 1px;
-  color: #00a2dd; }
+  color: #00a2dd;
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 35px; }
 
 .cruise__description {
   font-weight: 500;
-  letter-spacing: 1px; }
+  line-height: 2.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-left: 35px; }
 
 .cruise__price {
   font-family: RobotoSlab;
   font-size: 3rem;
   line-height: 4.8rem;
   color: #0d3351;
-  display: inline-block; }
+  display: inline-block;
+  margin: 0;
+  padding: 7px 35px 30px; }
 
 .cruise__old-price {
   font-family: RobotoSlab;
@@ -275,3 +296,23 @@ body {
   line-height: 4.8rem;
   text-decoration: line-through;
   opacity: 0.5; }
+
+.cruise__wrapped {
+  margin-bottom: 20px; }
+
+.footer {
+  background-color: #fff; }
+
+.footer__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 130px; }
+
+.ref__itself {
+  line-height: 2.4rem; }

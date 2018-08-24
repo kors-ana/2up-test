@@ -1,0 +1,13 @@
+.footer {
+  background-color: #fff;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+  }
+}
+
+.ref__itself {
+  @extend %minorText;
+  line-height: 2.4rem;
+}
