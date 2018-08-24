@@ -1,0 +1,56 @@
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    @extend %mainText;
+  }
+  &__sort {
+    @extend %minorText;
+    line-height: 2.4rem;
+  }
+  &__cruises {
+    @include row_grid(15px);
+  }
+  &__button {
+    @extend %button;
+    psdding: 0 40px;
+  }
+}
+
+.cruise {
+  @include col_grid(555px, 15px, 2);
+  &__title {
+    font: {
+      family: RobotoSlab;
+      size: 1.8rem;
+      weight: 300;
+    }
+    line-height: 4.8rem;
+    letter-spacing: 1px;
+    color: #00a2dd;
+  }
+  &__description {
+    @extend %minorText;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  &__price {
+    font: {
+      family: RobotoSlab;
+      size: 3rem;
+    }
+    line-height: 4.8rem;
+    color: #0d3351;
+    display: inline-block;
+  }
+  &__old-price {
+    font: {
+      family: RobotoSlab;
+      size: 1.8rem;
+    }
+    line-height: 4.8rem;
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}

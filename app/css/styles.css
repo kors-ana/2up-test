@@ -52,16 +52,25 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-.header__title, .header__title-important {
+.header__title, .header__title-important, .catalogue__title {
   font-family: RobotoSlab;
   font-size: 3.6rem;
+  font-weight: 300;
   line-height: 4.8rem;
   color: #0d3351; }
 
-.params__item {
+.params__item, .catalogue__sort, .cruise__description {
   font-family: Raleway;
   font-size: 1.4rem;
   color: #0d3351; }
+
+.header__button, .catalogue__button {
+  font-family: Raleway;
+  font-size: 1.4rem;
+  line-height: 4.8rem;
+  color: #fff;
+  background-color: #33c7fd;
+  padding: 0px 50px; }
 
 .header {
   background: url("../img/pictures/header_background.png") no-repeat 100% 100%;
@@ -190,7 +199,6 @@ body {
 
 .header__title {
   margin: 0;
-  font-weight: 300;
   letter-spacing: 1px; }
 
 .header__title-important {
@@ -200,10 +208,70 @@ body {
   margin-top: 60px;
   margin-bottom: 70px; }
 
-.header__button {
-  font-family: Raleway;
-  font-size: 1.4rem;
+.catalogue {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.catalogue__sort {
+  line-height: 2.4rem; }
+
+.catalogue__cruises {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.catalogue__button {
+  psdding: 0 40px; }
+
+.cruise {
+  width: -webkit-calc(100% / 2 * 555px - 15px * 2);
+  width: calc(100% / 2 * 555px - 15px * 2);
+  margin-left: 15px;
+  margin-right: 15px; }
+
+.cruise__title {
+  font-family: RobotoSlab;
+  font-size: 1.8rem;
+  font-weight: 300;
   line-height: 4.8rem;
-  color: #fff;
-  background-color: #33c7fd;
-  padding: 0px 50px; }
+  letter-spacing: 1px;
+  color: #00a2dd; }
+
+.cruise__description {
+  font-weight: 500;
+  letter-spacing: 1px; }
+
+.cruise__price {
+  font-family: RobotoSlab;
+  font-size: 3rem;
+  line-height: 4.8rem;
+  color: #0d3351;
+  display: inline-block; }
+
+.cruise__old-price {
+  font-family: RobotoSlab;
+  font-size: 1.8rem;
+  line-height: 4.8rem;
+  text-decoration: line-through;
+  opacity: 0.5; }
