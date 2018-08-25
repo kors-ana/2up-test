@@ -43,28 +43,42 @@
 }
 
 .menu {
+  position: relative;
   &__list {
+    position: absolute;
     background-color: #0d3351;
+    width: 0;
+    opacity: 0;
+    padding: 55px 0 70px;
     margin-top: 10px;
-    padding: 55px 100px 70px 20px;
-    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 0.4s, padding 0.4s, opacity 0.5s;
   }
   &__button {
-    height: 0;
-    width: 0;
     margin-top: 30px;
+  }
+  &:hover &__list {
+    width: 420px;
+    padding: 55px 70px 70px 40px;
+    opacity: 1;
   }
 }
 
-.list__ref {
-  font: {
-    family: RobotoSlab;
-    size: 1.8rem;
+.list {
+  &__ref {
+    display: block;
+    font: {
+      family: RobotoSlab;
+      size: 1.8rem;
+    }
+    line-height: 4.8rem;
+    letter-spacing: 1px;
+    color: #fff;
+    &:hover {
+
+    }
   }
-  line-height: 4.8rem;
-  letter-spacing: 1px;
-  color: #fff;
-  padding: 25px;
 }
 
 .params {
@@ -81,6 +95,7 @@
     }
     &-subtext {
       font-size: 1rem;
+      font-weight: 500;
       padding: 0;
       padding-top: 5px;
       margin: 0;
@@ -160,5 +175,16 @@
   }
   &__button {
     @extend %button;
+    letter-spacing: 1px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 70px;
+      left: 65px;
+      background: url('../img/svg/transition-line.svg');
+      width: 61px;
+      height: 280px;
+    }
   }
 }
