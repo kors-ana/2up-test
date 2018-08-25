@@ -1,11 +1,17 @@
+.main {
+  &__container {
+    @extend %container;
+  }
+}
+
 .catalogue {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
   &__title {
     @extend %mainText;
-    margin: 0;
-    margin-top: 100px;
+    width: 330px;
+    margin: 100px auto 0;
     letter-spacing: 1px;
   }
   &__sort {
@@ -13,6 +19,9 @@
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 2.4rem;
+    display: block;
+    width: 230px;
+    margin: 0 auto;
     margin-bottom: 30px;
     position: relative;
     &:after {
@@ -26,52 +35,38 @@
     }
   }
   &__cruises {
-    @include row_grid(15px);
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+    //@include row_grid(15px);
+    margin-left: -15px;
+    margin-right: -15px;
   }
   &__cruise {
-    @include col_grid(555px, 15px, 2);
+    @include col_grid(6, 15px);
     margin: {
       top: 10px;
       bottom: 10px;
     }
-    &:first-child:before {
-      content: 'Хит продаж';
-      position: absolute;
-      top: -7px;
-      right: 47px;
-      width: 90px;
-      height: 50px;
-      color: #fff;
-      text-align: center;
-      letter-spacing: 1px;
-      background-color: #33c7fd;
-      text-transform: uppercase;
-      font: {
-        family: Raleway;
-        size: 1.4rem;
-        weight: 300;
-      }
-      padding-top: 30px;
+    &:nth-child(1),
+    &:nth-child(4) {
+      float: left;
     }
-    &:first-child:after {
-      content: '';
-      position: absolute;
-      top: 73px;
-      right: 47px;
-      display: block;
-      border-left: 45px solid #33c7fd;
-      border-right: 45px solid #33c7fd;
-      border-bottom: 20px solid transparent;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5) {
+      float: right;
     }
   }
   &__button {
     @extend %button;
     letter-spacing: 1px;
-    padding: 0 45px 0 40px;
-    margin: {
-      top: 10px;
-      bottom: 65px;
-    }
+    padding: 0 35px;
+    display: block;
+    width: 200px;
+    margin: 20px auto 65px;
     position: relative;
     &:after {
       content: '';
@@ -94,58 +89,78 @@
       size: 1.8rem;
       weight: 300;
     }
-    line-height: 4.3rem;
+    //line-height: 4.3rem;
     letter-spacing: 1px;
     color: #00a2dd;
     margin: 0;
-    padding: {
-      top: 15px;
-      left: 35px;
-    }
+    padding: 20px 0 10px 35px;
   }
   &__description {
     @extend %minorText;
     font-weight: 500;
-    line-height: 2.4rem;
     letter-spacing: 1px;
     margin: 0;
-    padding-left: 35px;
+    padding: 5px 0 5px 35px;
   }
   &__price {
     font: {
       family: RobotoSlab;
       size: 3rem;
     }
-    line-height: 4.8rem;
     color: #0d3351;
     display: inline-block;
     margin: 0;
-    padding: 7px 35px 30px;
+    padding: 10px 35px 36px;
   }
-
   &__old-price {
     font: {
       family: RobotoSlab;
       size: 1.8rem;
     }
-    line-height: 4.8rem;
     text-decoration: line-through;
     opacity: 0.5;
   }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  &__image-desktop {
+    display: block;
+    width: 100%;
   }
-
-  &__wrapped:first-child:before {
-    content: 'Акция';
+  &__image-tablet {
+    display: none; //добавила в html второе изображение, так как на десктопной и планшетной версии изображения отличаются: обрезаны по-разному, а полного изображения у меня в доступе нет
+  }
+  &__bestseller {
     position: absolute;
-    top: -7px;
+    top: -20px;
     right: 47px;
     width: 90px;
-    height: 40px;
+    height: 80px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #33c7fd;
+    text-transform: uppercase;
+    font: {
+      family: Raleway;
+      size: 1.4rem;
+      weight: 300;
+    }
+    padding-top: 30px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 80px;
+      right: 0px;
+      display: block;
+      border-left: 45px solid #33c7fd;
+      border-right: 45px solid #33c7fd;
+      border-bottom: 20px solid transparent;
+    }
+  }
+  &__promotion {
+    position: absolute;
+    top: -20px;
+    right: 47px;
+    width: 90px;
+    height: 80px;
     color: #fff;
     text-align: center;
     letter-spacing: 1px;
@@ -157,25 +172,23 @@
       weight: 300;
     }
     padding-top: 40px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 80px;
+      right: 0px;
+      display: block;
+      border-left: 45px solid #f20542;
+      border-right: 45px solid #f20542;
+      border-bottom: 22px solid transparent;
+    }
   }
-  &__wrapped:first-child:after {
-    content: '';
+  &__discount {
     position: absolute;
-    top: 73px;
-    right: 47px;
-    display: block;
-    border-left: 45px solid #f20542;
-    border-right: 45px solid #f20542;
-    border-bottom: 22px solid transparent;
-  }
-
-  &__wrapped:last-child:before {
-    content: 'Скидка 10%';
-    position: absolute;
-    top: -7px;
+    top: -20px;
     right: 47px;
     width: 90px;
-    height: 40px;
+    height: 80px;
     color: #fff;
     text-align: center;
     letter-spacing: 1px;
@@ -187,16 +200,15 @@
       weight: 300;
     }
     padding-top: 30px;
-    padding-bottom: 10px;
-  }
-  &__wrapped:last-child:after {
-    content: '';
-    position: absolute;
-    top: 73px;
-    right: 47px;
-    display: block;
-    border-left: 45px solid #f20542;
-    border-right: 45px solid #f20542;
-    border-bottom: 20px solid transparent;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 80px;
+      right: 0px;
+      display: block;
+      border-left: 45px solid #f20542;
+      border-right: 45px solid #f20542;
+      border-bottom: 22px solid transparent;
+    }
   }
 }

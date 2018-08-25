@@ -5,6 +5,7 @@
     bottom: 45px;
   }
   &__container {
+    @extend %container;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
