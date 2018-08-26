@@ -127,6 +127,8 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
+  z-index: 4;
+  position: relative;
 }
 
 .menu {
@@ -136,20 +138,27 @@
     background-color: #0d3351;
     width: 0;
     opacity: 0;
-    padding: 55px 0 70px;
+    padding: 55px 0 65px;
     margin-top: 10px;
     white-space: nowrap;
     overflow: hidden;
     transition: width 0.4s, padding 0.4s, opacity 0.5s;
+    z-index: 1;
+    &_visibility_visible {
+      width: 420px;
+      opacity: 1;
+    }
   }
   &__button {
-    margin-top: 30px;
+    margin: 20px 0 -10px -10px;
     cursor: pointer;
-  }
-  &:hover &__list {
-    width: 420px;
-    padding: 55px 70px 70px 40px;
-    opacity: 1;
+    padding: 10px;
+    transform: rotate(0deg);
+    transition: 0.6s;
+    &_press_pressed {
+      transform: rotate(360deg);
+
+    }
   }
 }
 
@@ -160,9 +169,13 @@
       family: RobotoSlab;
       size: 1.8rem;
     }
-    line-height: 4.8rem;
+    line-height: 4.9rem;
     letter-spacing: 1px;
     color: #fff;
+    padding: 0 45px;
+    &:hover {
+      background-color: #33c7fd;
+    }
   }
 }
 
