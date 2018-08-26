@@ -8,9 +8,25 @@ body {
 }
 
 %container {
-  max-width: 1140px;
+  padding: {
+    left: 30px;
+    right: 30px;
+  }
+  max-width: 1200px;
   margin: {
     left: auto;
     right: auto;
   }
+  @include media(1200px) {
+    max-width: 900px;
+  }
+  @include media(980px) {
+    //max-width: 720px;
+    padding: {
+      left: 24px;
+      right: 24px;
+    }
+  }
 }
+
+

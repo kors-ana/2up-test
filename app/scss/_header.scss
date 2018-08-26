@@ -6,6 +6,9 @@
   }
   line-height: 4.8rem;
   color: #0d3351;
+  @include media(1200px) {
+    font-size: 2.6rem;
+  }
 }
 
 %minorText {
@@ -24,14 +27,85 @@
   line-height: 4.8rem;
   color: #fff;
   background-color: #33c7fd;
-  padding: 0px 50px;
+  padding: 0 50px;
+  cursor: pointer;
+  &:hover {
+    background-color: #13b0e9;
+  }
+  &:active {
+    background-color: #64d6ff;
+  }
 }
 
 .header {
-  background: url('../img/pictures/header_background.png') no-repeat 100% 100%;
+  background: url('../img/pictures/header_background.png') no-repeat 50% 50%;
   background-size: cover;
   &__container {
     @extend %container;
+  }
+  &__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 570px;
+    position: relative;
+    @include media(980px) {
+      height: 520px;
+      justify-content: center;
+    }
+  }
+  &__picture {
+    width: 100%;
+    @include media(980px) {
+      width: 80%;
+    }
+  }
+  &__title {
+    @extend %mainText;
+    margin: 0;
+    letter-spacing: 1px;
+    &-important {
+      @extend %mainText;
+      font: {
+        size: 10rem;
+        weight: 300;
+      }
+      text-transform: uppercase;
+      margin: {
+        top: 60px;
+        bottom: 70px;
+      }
+      @include media(1200px) {
+        font-size: 6.8rem;
+      }
+      @include media(980px) {
+        margin: 15px auto 35px;
+      }
+    }
+  }
+  &__button {
+    @extend %button;
+    letter-spacing: 1px;
+    position: relative;
+    @include media(980px) {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__transition-line{
+    display: block;
+    width: 61px;
+    height: 280px;
+    position: absolute;
+    bottom: -95px;
+    overflow: hidden;
+    @include media(980px) {
+      width: 50px;
+    }
+    &-image {
+      width: 100%;
+    }
   }
 }
 
@@ -56,6 +130,7 @@
   }
   &__button {
     margin-top: 30px;
+    cursor: pointer;
   }
   &:hover &__list {
     width: 420px;
@@ -74,9 +149,6 @@
     line-height: 4.8rem;
     letter-spacing: 1px;
     color: #fff;
-    &:hover {
-
-    }
   }
 }
 
@@ -89,8 +161,10 @@
     @extend %minorText;
     font-weight: 500;
     position: relative;
+    cursor: pointer;
     &:last-child {
       margin-top: -10px;
+      cursor: default;
     }
     &-subtext {
       font-size: 1rem;
@@ -106,7 +180,7 @@
       position: absolute;
       top: 1px;
       left: -20px;
-      background: url('../img/svg/navigation_user.svg') 100% 100%;
+      background: url('../img/svg/navigation_user.svg') 50% 50%;
     }
     &:first-child:after {
       content: "";
@@ -115,7 +189,7 @@
       position: absolute;
       top: 7px;
       left: 115px;
-      background: url('../img/svg/navigation_arrow.svg') 100% 100%;
+      background: url('../img/svg/navigation_arrow.svg') 50% 50%;
     }
     &:nth-child(2):before {
       content: "";
@@ -124,7 +198,7 @@
       position: absolute;
       top: 2px;
       left: -20px;
-      background: url('../img/svg/navigatoon_ruble.svg') 100% 100%;
+      background: url('../img/svg/navigatoon_ruble.svg') 50% 50%;
     }
     &:nth-child(2):after {
       content: "";
@@ -133,7 +207,7 @@
       position: absolute;
       top: 7px;
       left: 50px;
-      background: url('../img/svg/navigation_arrow.svg') 100% 100%;
+      background: url('../img/svg/navigation_arrow.svg') 50% 50%;
     }
     &:nth-child(3):after {
       content: "";
@@ -142,48 +216,7 @@
       position: absolute;
       top: 7px;
       left: 25px;
-      background: url('../img/svg/navigation_arrow.svg') 100% 100%;
-    }
-  }
-}
-
-.header {
-  &__center {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 570px;
-  }
-  &__title {
-    @extend %mainText;
-    margin: 0;
-    letter-spacing: 1px;
-    &-important {
-      @extend %mainText;
-      font: {
-        size: 10rem;
-        weight: 300;
-      }
-      text-transform: uppercase;
-      margin: {
-        top: 60px;
-        bottom: 70px;
-      }
-    }
-  }
-  &__button {
-    @extend %button;
-    letter-spacing: 1px;
-    position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 70px;
-      left: 65px;
-      background: url('../img/svg/transition-line.svg');
-      width: 61px;
-      height: 280px;
+      background: url('../img/svg/navigation_arrow.svg') 50% 50%;
     }
   }
 }

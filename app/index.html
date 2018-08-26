@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <nav class="navigation">
+            <nav class="header__navigation navigation">
                 <div class="navigation__menu menu">
                     <button class="menu__button">
                         <img src="img/svg/menu.svg" alt="">
@@ -45,62 +45,75 @@
             </nav>
             <div class="header__center">
                 <div class="header__logo">
-                    <img src="img/pictures/header_logo.png" alt="">
+                    <img class="header__picture" src="img/pictures/header_logo.png" alt="">
                 </div>
                 <h2 class="header__title">Морские прогулки</h2>
                 <h1 class="header__title-important">По черному морю</h1>
                 <button class="header__button">Выбрать круиз</button>
+                <div class="header__transition-line">
+                    <img src="img/svg/transition-line.svg" class="header__transition-line-image" alt="line">
+                </div>
             </div>
         </div>
     </header>
 
     <main class="main">
         <div class="main__container">
-            <div class="catalogue">
+            <div class="main__catalogue catalogue">
                 <h2 class="catalogue__title">Каталог круизов</h2>
                 <button class="catalogue__sort">Сортировать круизы по <i>цене</i></button>
                 <ul class="catalogue__cruises">
                     <li class="catalogue__cruise cruise">
                         <img class="cruise__image-desktop" src="img/pictures/cruise-desktop-image1.png">
                         <img class="cruise__image-tablet" src="img/pictures/cruise-tablet-image1.png">
-                        <h3 class="cruise__title">Морской круиз в Анапу</h3>
-                        <p class="cruise__description"><b>Маршрут: </b>Сочи-Лазаревское-Геленджик-Анапа</p>
-                        <p class="cruise__description"><b>Продолжительность: </b>10 ч. 0 мин.</p>
-                        <p class="cruise__price">49 000 руб.</p>
+                        <div class="cruise__info">
+                            <h3 class="cruise__title">Морской круиз в Анапу</h3>
+                            <p class="cruise__description"><b>Маршрут: </b>Сочи-Лазаревское-Геленджик-Анапа</p>
+                            <p class="cruise__description"><b>Продолжительность: </b>10 ч. 0 мин.</p>
+                            <p class="cruise__price">49 000 руб.</p>
+                        </div>
                         <p class="cruise__bestseller">Хит продаж</p>
                     </li>
                     <li class="catalogue__cruise cruise">
                         <img class="cruise__image-desktop" src="img/pictures/cruise-desktop-image2.png">
                         <img class="cruise__image-tablet" src="img/pictures/cruise-tablet-image2.png">
-                        <h3 class="cruise__title">Обзорная морская прогулка с экскурсией</h3>
-                        <p class="cruise__description"><b>Маршрут: </b>Сочи-Адлер-Сочи (без высадки)</p>
-                        <p class="cruise__description"><b>Продолжительность: </b>1 ч. 0 мин.</p>
-                        <p class="cruise__price">5 000 руб.</p><span class="cruise__old-price">15000 руб.</span>
+                        <div class="cruise__info">
+                            <h3 class="cruise__title">Обзорная морская прогулка с экскурсией</h3>
+                            <p class="cruise__description"><b>Маршрут: </b>Сочи-Адлер-Сочи (без высадки)</p>
+                            <p class="cruise__description"><b>Продолжительность: </b>1 ч. 0 мин.</p>
+                            <p class="cruise__price">5 000 руб.</p><span class="cruise__old-price">15000 руб.</span>
+                        </div>
                         <p class="cruise__promotion">Акция</p>
                     </li>
                     <li class="catalogue__cruise cruise">
                         <img class="cruise__image-desktop" src="img/pictures/cruise-desktop-image3.png">
                         <img class="cruise__image-tablet" src="img/pictures/cruise-tablet-image3.png">
-                        <h3 class="cruise__title">Морская прогулка в Геленджик</h3>
-                        <p class="cruise__description"><b>Маршрут: </b>Сочи-Туапсе-Геленджик</p>
-                        <p class="cruise__description"><b>Продолжительность: </b> 12 ч. 30 мин.</p>
-                        <p class="cruise__price">7 000 руб.</p><span class="cruise__old-price">10000 руб.</span>
+                        <div class="cruise__info">
+                            <h3 class="cruise__title">Морская прогулка в Геленджик</h3>
+                            <p class="cruise__description"><b>Маршрут: </b>Сочи-Туапсе-Геленджик</p>
+                            <p class="cruise__description"><b>Продолжительность: </b> 12 ч. 30 мин.</p>
+                            <p class="cruise__price">7 000 руб.</p><span class="cruise__old-price">10000 руб.</span>
+                        </div>
                         <p class="cruise__discount">Скидка 10%</p>
                     </li>
                     <li class="catalogue__cruise cruise">
                         <img class="cruise__image-desktop" src="img/pictures/cruise-desktop-image4.png">
                         <img class="cruise__image-tablet" src="img/pictures/cruise-tablet-image4.png">
-                        <h3 class="cruise__title">Морской круиз в Новороссийск</h3>
-                        <p class="cruise__description"><b>Маршрут: </b>Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</p>
-                        <p class="cruise__description"><b>Продолжительность: </b>13 ч. 0 мин.</p>
-                        <p class="cruise__price">14 800 руб.</p>
+                        <div class="cruise__info">
+                            <h3 class="cruise__title">Морской круиз в Новороссийск</h3>
+                            <p class="cruise__description"><b>Маршрут: </b>Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</p>
+                            <p class="cruise__description"><b>Продолжительность: </b>13 ч. 0 мин.</p>
+                            <p class="cruise__price">14 800 руб.</p>
+                        </div>
                     </li>
                     <li class="catalogue__cruise cruise">
                         <img class="cruise__image-desktop" src="img/pictures/cruise-desktop-image5.png">
-                        <h3 class="cruise__title">Морская прогулка в Абрау-Дюрсо  </h3>
-                        <p class="cruise__description"><b>Маршрут: </b>Сочи-Абрау-Дюрсо</p>
-                        <p class="cruise__description"><b>Продолжительность: </b>11 ч. 0 мин.</p>
-                        <p class="cruise__price">14 800 руб.</p>
+                        <div class="cruise__info">
+                            <h3 class="cruise__title">Морская прогулка в Абрау-Дюрсо  </h3>
+                            <p class="cruise__description"><b>Маршрут: </b>Сочи-Абрау-Дюрсо</p>
+                            <p class="cruise__description"><b>Продолжительность: </b>11 ч. 0 мин.</p>
+                            <p class="cruise__price">14 800 руб.</p>
+                        </div>
                     </li>
                 </ul>
                 <button class="catalogue__button">Больше круизов</button>
@@ -109,7 +122,7 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__container container">
+        <div class="footer__container">
             <ul class="footer__ref ref">
                 <li class="ref__item"><a class='ref__itself' href="#">Вход для партнеров</a></li>
                 <li class="ref__item"><a class='ref__itself' href="#">О компании</a></li>
@@ -117,7 +130,7 @@
             </ul>
             <div class="footer__social social">
                 <p class="social__title">Будь на связи:</p>
-                <div class="social__ref-container">
+                <div class="social__icon-container">
                     <a href="#" class="social__item">
                         <svg class="social__icon">
                             <use xlink:href="../img/svg/sprite_social.svg#vk"></use>

@@ -23,7 +23,10 @@
 }
 
 .social {
-  margin-right: 310px;
+  margin-right: 27%;
+  @include media(980px) {
+    margin: auto;
+  }
   &__title {
     @extend %minorText;
     font-weight: 500;
@@ -31,7 +34,7 @@
     margin: 0;
     margin-bottom: 10px;
   }
-  &__ref-container {
+  &__icon-container {
     display: flex;
     justify-content: space-between;
     width: 150px;
@@ -44,6 +47,9 @@
     background-color: #0d3351;
     width: 30px;
     height: 30px;
+    &:hover {
+      background-color: #13b0e9;
+    }
   }
   &__icon {
     width: 17px;
