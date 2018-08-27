@@ -267,3 +267,82 @@
     }
   }
 }
+.pop-up {
+  display: none;
+  width:100%;
+  min-height:100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  position:fixed;
+  top:0px;
+  &__card {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 100px 40px 90px;
+    background-color: #fff;
+    width: 850px;
+  }
+}
+
+.card {
+  &__images {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    &-main {
+      padding-bottom: 10px;
+      font-size: 0;
+    }
+    &-rest {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.text {
+  margin-left: 20px;
+  &__title {
+    font: {
+      family: RobotoSlab;
+      size: 1.8rem;
+      weight: 300;
+    }
+    letter-spacing: 1px;
+    line-height: 2.8rem;
+    color: #00a2dd;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  &__description {
+    @extend %minorText;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px 0 5px;
+    line-height: 2.5rem;
+  }
+  &__price {
+    font: {
+      family: RobotoSlab;
+      size: 3rem;
+    }
+    color: #0d3351;
+    display: inline-block;
+    margin: 0;
+    padding: 10px 0;
+    word-spacing: 7px;
+  }
+  &__button {
+    @extend %button;
+    letter-spacing: 1px;
+    padding: 0 35px;
+    display: block;
+    width: 200px;
+  }
+}

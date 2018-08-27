@@ -147,6 +147,12 @@
     &_visibility_visible {
       width: 420px;
       opacity: 1;
+      @include media(479px) {
+        width: 350px;
+      }
+      @include media(383px) {
+        width: 285px;
+      }
     }
   }
   &__button {
@@ -173,6 +179,12 @@
     letter-spacing: 1px;
     color: #fff;
     padding: 0 45px;
+    @include media(479px) {
+      padding: 0 30px;
+    }
+    @include media(383px) {
+      padding: 0 16px;
+    }
     &:hover {
       background-color: #33c7fd;
     }
