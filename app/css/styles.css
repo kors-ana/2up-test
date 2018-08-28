@@ -656,6 +656,12 @@ body {
   position: fixed;
   top: 0px; }
 
+.pop-up_visibility_visible {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .pop-up__card {
   margin: 0 auto;
   position: absolute;
@@ -732,6 +738,18 @@ body {
   margin: 0;
   padding: 10px 0;
   word-spacing: 7px; }
+
+.text__old-price {
+  font-family: RobotoSlab;
+  font-size: 1.8rem;
+  text-decoration: line-through;
+  opacity: 0.5;
+  margin-left: 30px; }
+
+@media only screen and (max-width: 356px) {
+  .text__old-price {
+    display: block;
+    margin: 0; } }
 
 .text__button {
   letter-spacing: 1px;
