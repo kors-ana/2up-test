@@ -147,6 +147,19 @@ function fulfil(i) {
             } else {
                 return;
             }
+
+            event.stopPropagation();
+        }
+
+        var srcOfMainImg = document.getElementsByClassName('main-image')[0];
+        var restImgCol = document.getElementsByClassName('card__images-rest')[0];
+
+        restImgCol.onclick = function(event) {
+            var target = event.target;
+            var targetSrc = target.src;
+
+            target.src = srcOfMainImg.src;
+            srcOfMainImg.src = targetSrc;
         }
     }
 }

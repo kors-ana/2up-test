@@ -711,6 +711,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.active {
+  width: 361px;
+  height: 240px; }
+
 .text {
   margin-left: 20px; }
 
