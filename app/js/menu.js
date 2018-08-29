@@ -8,10 +8,15 @@ function Menu(menuBtnClass, menuListClass, menuBtnPressClass, menuListVisibility
 
         event.stopPropagation();
 
-        document.addEventListener('click', function menuActivated () {
-            menuList.classList.remove(menuListVisibilityClass);
-            menuBtn.classList.remove(menuBtnPressClass);
-            document.removeEventListener('click', menuActivated);
+        document.addEventListener('click', function menuActivated (event) {
+            var target = event.target;
+            if (target.classList.contains("menu__list") || target.classList.contains("list__ref")) {
+                return;
+            } else {
+                menuList.classList.remove(menuListVisibilityClass);
+                menuBtn.classList.remove(menuBtnPressClass);
+                document.removeEventListener('click', menuActivated);
+            }
         });
     });
 };

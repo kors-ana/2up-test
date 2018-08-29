@@ -142,7 +142,7 @@
     font-weight: 500;
     letter-spacing: 1px;
     margin: 0;
-    padding: 5px 0 5px;
+    padding: 5px 0;
   }
   &__price {
     font: {
@@ -171,12 +171,13 @@
   &__image-desktop {
     display: block;
     width: 100%;
+    cursor: pointer;
     @include media(1200px) {
       display: none;
     }
   }
   &__image-tablet {
-    display: none; //добавила в html второе изображение, так как на десктопной и планшетной версии изображения отличаются: обрезаны по-разному, а полного изображения у меня в доступе нет
+    display: none; // на момент десктопной версии скрываю это изображение, при 1200px скрывается десктопная версия
     @include media(1200px) {
       display: block;
       width: 100%;
@@ -269,12 +270,12 @@
 }
 .pop-up {
   display: none;
-  width:100%;
-  min-height:100%;
+  width: 100%;
+  min-height: 100%;
   background-color: rgba(0,0,0,0.5);
-  overflow:hidden;
-  position:fixed;
-  top:0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   &_visibility_visible {
     display: flex;
   }
@@ -309,11 +310,6 @@
   }
 }
 
-.active {
-  width: 361px;
-  height: 240px;
-}
-
 .text {
   margin-left: 20px;
   &__title {
@@ -332,7 +328,7 @@
     @extend %minorText;
     font-weight: 500;
     margin: 0;
-    padding: 5px 0 5px;
+    padding: 5px 0;
     line-height: 2.5rem;
   }
   &__price {

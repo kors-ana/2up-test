@@ -349,7 +349,7 @@ body {
   position: absolute;
   top: 2px;
   left: -20px;
-  background: url("../img/svg/navigatoon_ruble.svg") 50% 50%; }
+  background: url("../img/svg/navigation_ruble.svg") 50% 50%; }
 
 .params__item:nth-child(2):after {
   content: "";
@@ -530,7 +530,7 @@ body {
   font-weight: 500;
   letter-spacing: 1px;
   margin: 0;
-  padding: 5px 0 5px; }
+  padding: 5px 0; }
 
 .cruise__price {
   font-family: RobotoSlab;
@@ -555,7 +555,8 @@ body {
 
 .cruise__image-desktop {
   display: block;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
 @media only screen and (max-width: 1200px) {
   .cruise__image-desktop {
@@ -654,7 +655,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   position: fixed;
-  top: 0px; }
+  top: 0; }
 
 .pop-up_visibility_visible {
   display: -webkit-box;
@@ -711,10 +712,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.active {
-  width: 361px;
-  height: 240px; }
-
 .text {
   margin-left: 20px; }
 
@@ -731,7 +728,7 @@ body {
 .text__description {
   font-weight: 500;
   margin: 0;
-  padding: 5px 0 5px;
+  padding: 5px 0;
   line-height: 2.5rem; }
 
 .text__price {
@@ -799,7 +796,7 @@ body {
 .ref__itself {
   display: block;
   font-weight: 500;
-  padding-bottom: 5px; }
+  margin-bottom: 5px; }
 
 .social {
   margin-right: 27%; }

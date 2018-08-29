@@ -1,11 +1,7 @@
 var popUp = [];
 
 popUp[0] = {
-    mainImage: 'img/pictures/cruise-tablet-image2.png',
-    smallImageOne: 'img/pictures/cruise-tablet-image1.png',
-    smallImageTwo: 'img/pictures/cruise-tablet-image3.png',
-    smallImageThree: 'img/pictures/cruise-tablet-image4.png',
-    smallImageFour: 'img/pictures/cruise-tablet-image1.png',
+    images: ['img/pictures/cruise-tablet-image2.png', 'img/pictures/cruise-tablet-image1.png', 'img/pictures/cruise-tablet-image3.png', 'img/pictures/cruise-tablet-image4.png', 'img/pictures/cruise-tablet-image1.png'],
     textTitle: 'Морской круиз в Анапу',
     textRoute: '<b>Маршрут:</b> Сочи-Лазаревское-Геленджик-Анапа',
     textDuration: '<b>Продолжительность:</b> 10 ч. 0 мин.',
@@ -18,11 +14,7 @@ popUp[0] = {
 };
 
 popUp[1] = {
-    mainImage: 'img/pictures/cruise-tablet-image3.png',
-    smallImageOne: 'img/pictures/cruise-tablet-image2.png',
-    smallImageTwo: 'img/pictures/cruise-tablet-image1.png',
-    smallImageThree: 'img/pictures/cruise-tablet-image4.png',
-    smallImageFour: 'img/pictures/cruise-tablet-image1.png',
+    images: ['img/pictures/cruise-tablet-image1.png', 'img/pictures/cruise-tablet-image2.png', 'img/pictures/cruise-tablet-image3.png', 'img/pictures/cruise-tablet-image4.png', 'img/pictures/cruise-tablet-image1.png'],
     textTitle: 'Обзорная морская прогулка с экскурсией',
     textRoute: '<b>Маршрут:</b> Сочи-Адлер-Сочи (без высадки)',
     textDuration: '<b>Продолжительность:</b> 1 ч. 0 мин.',
@@ -35,11 +27,7 @@ popUp[1] = {
 };
 
 popUp[2] = {
-    mainImage: 'img/pictures/cruise-tablet-image4.png',
-    smallImageOne: 'img/pictures/cruise-tablet-image2.png',
-    smallImageTwo: 'img/pictures/cruise-tablet-image3.png',
-    smallImageThree: 'img/pictures/cruise-tablet-image1.png',
-    smallImageFour: 'img/pictures/cruise-tablet-image1.png',
+    images: ['img/pictures/cruise-tablet-image3.png', 'img/pictures/cruise-tablet-image2.png', 'img/pictures/cruise-tablet-image1.png', 'img/pictures/cruise-tablet-image4.png', 'img/pictures/cruise-tablet-image1.png'],
     textTitle: 'Морская прогулка в Геленджик',
     textRoute: '<b>Маршрут:</b> Сочи-Туапсе-Геленджик',
     textDuration: '<b>Продолжительность:</b> 12 ч. 30 мин.',
@@ -52,11 +40,7 @@ popUp[2] = {
 };
 
 popUp[3] = {
-    mainImage: 'img/pictures/cruise-tablet-image1.png',
-    smallImageOne: 'img/pictures/cruise-tablet-image2.png',
-    smallImageTwo: 'img/pictures/cruise-tablet-image3.png',
-    smallImageThree: 'img/pictures/cruise-tablet-image4.png',
-    smallImageFour: 'img/pictures/cruise-tablet-image1.png',
+    images: ['img/pictures/cruise-tablet-image4.png', 'img/pictures/cruise-tablet-image1.png', 'img/pictures/cruise-tablet-image3.png', 'img/pictures/cruise-tablet-image2.png', 'img/pictures/cruise-tablet-image1.png'],
     textTitle: 'Морской круиз в Новороссийск',
     textRoute: '<b>Маршрут:</b> Сочи-Геленджик-Новороссйиск-Геленджик-Сочи',
     textDuration: '<b>Продолжительность:</b> 13 ч. 0 мин.',
@@ -69,11 +53,7 @@ popUp[3] = {
 };
 
 popUp[4] = {
-    mainImage: 'img/pictures/cruise-tablet-image1.png',
-    smallImageOne: 'img/pictures/cruise-tablet-image2.png',
-    smallImageTwo: 'img/pictures/cruise-tablet-image3.png',
-    smallImageThree: 'img/pictures/cruise-tablet-image4.png',
-    smallImageFour: 'img/pictures/cruise-tablet-image1.png',
+    images: ['img/pictures/cruise-tablet-image2.png', 'img/pictures/cruise-tablet-image1.png', 'img/pictures/cruise-tablet-image3.png', 'img/pictures/cruise-tablet-image4.png', 'img/pictures/cruise-tablet-image1.png'],
     textTitle: 'Морская прогулка в Абрау-Дюрсо',
     textRoute: '<b>Маршрут:</b> Сочи-Абрау-Дюрсо',
     textDuration: '<b>Продолжительность:</b> 11 ч. 0 мин.',
@@ -100,11 +80,11 @@ function fulfil(i) {
     return function () {
         popUpDiv.classList.add('pop-up_visibility_visible');
 
-        mainImg.children[0].src = popUp[i].mainImage;
-        restImg.children[0].src = popUp[i].smallImageOne;
-        restImg.children[1].src = popUp[i].smallImageTwo;
-        restImg.children[2].src = popUp[i].smallImageThree;
-        restImg.children[3].src = popUp[i].smallImageFour;
+        mainImg.children[0].src = popUp[i].images[0];
+        restImg.children[0].src = popUp[i].images[1];
+        restImg.children[1].src = popUp[i].images[2];
+        restImg.children[2].src = popUp[i].images[3];
+        restImg.children[3].src = popUp[i].images[4];
         text.children[0].innerHTML = popUp[i].textTitle;
         text.children[1].innerHTML = popUp[i].textRoute;
         text.children[2].innerHTML = popUp[i].textTitle;
@@ -126,7 +106,7 @@ function fulfil(i) {
             }
 
             event.stopPropagation();
-        }
+        };
 
         var srcOfMainImg = document.getElementsByClassName('main-image')[0];
         var restImgCol = document.getElementsByClassName('card__images-rest')[0];
